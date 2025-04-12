@@ -1,61 +1,91 @@
-
-body {
-    background-color: #f7f7f7;
-  }
-
 .home-nest {
     font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
-  }
-  
+}
+
 .header-bg {
     background-image: url('https://assets.architecturaldigest.in/photos/62026064b5d9eefa7e4e2ddf/4:3/w_1439,h_1079,c_limit/How%20to%20furnish%20your%20home%20on%20a%20budget.jpg');
     background-position: center;
     background-repeat: no-repeat;
-  }
+    background-size: cover;
+    position: relative;
+}
 
-  .navbar {
-    background-color: #3cb8b4;
-  }
-  
-  footer {
-    background-color: #3cb8b4;
-  }
-  
-  h1, h2 {
+.title-container {
+    background-color: rgba(255, 255, 255, 0.7);
     color: maroon;
-  }
-  
-  /* Stile per card dei prodotti */
-  .card {
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.title-container img {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+.header-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+}
+
+
+.navbar {
+    background-color: #3cb8b4;
+}
+
+.nav-link {
+    transition: background-color 0.5s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+
+footer {
+    background-color: #3cb8b4;
+}
+
+h2 {
+    color: maroon;
+}
+
+/* Stile per card dei prodotti */
+.card {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card img {
+}
+
+.card img {
     border-radius: 10px;
     height: 200px;
     object-fit: cover;
-  }
-  
-  .card-body {
+}
+
+.card-body {
     background-color: #f4f4f4;
     padding: 20px;
-  }
-  
-  .card-body h5 {
-    color: #3cb8b4; /* Verde acqua */
-  }
-  
-  .card-body p {
+}
+
+.card-body h5 {
+    color: #3cb8b4;
+    /* Verde acqua */
+}
+
+.card-body p {
     color: #7d7d7d;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .card {
-      margin-bottom: 20px;
+        margin-bottom: 20px;
     }
-  }
-  
-  
+}
