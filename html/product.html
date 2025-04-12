@@ -1,17 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dettaglio Prodotto</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="./css/product.css" rel="stylesheet">
 </head>
-<body class="p-4">
-  <div class="container">
-    <a href="index.html" class="btn btn-secondary mb-3">← Torna alla Home</a>
-    <div id="product-detail" class="card shadow p-4"></div>
-  </div>
 
+<body>
+
+  <!-- Header -->
+  <header class="text-center py-5 header-bg">
+    <div class="title-container">
+      <img src="./img/logo-nest.png" alt="Logo Nest">
+      <h1>Home Nest</h1>
+      <p>Rendi la tua casa il tuo nido di relax</p>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Prodotti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Chi Siamo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contatti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./backoffice.html"> <i class="bi bi-lock"></i> Accedi al backoffice</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Icona Carrello -->
+      <a href="#" class="nav-link text-white" id="view-cart-btn">
+        <i class="bi bi-cart"></i> Carrello
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- Product Detail Section -->
+  <div id="product-detail" class="card shadow-lg p-4"></div>
+
+  <!-- Footer -->
+  <footer class="text-center text-white py-4">
+    <p>&copy; 2025 Home Nest | <i class="bi bi-telephone"></i> 02-555-555</p>
+    <p>
+      <i class="bi bi-tiktok"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-pinterest"></i>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/product.js"></script>
 </body>
+
 </html>

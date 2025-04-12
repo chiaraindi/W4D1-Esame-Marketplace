@@ -21,12 +21,17 @@ if (id) {
             <p class="text-muted">${p.brand}</p>
             <p>${p.description}</p>
             <h4 class="text-primary">${p.price} €</h4>
+            <a href="#" class="btn btn-success mt-3">Aggiungi al carrello</a>
           </div>
         </div>
       `;
     })
     .catch(err => {
-      detailContainer.innerHTML = "<p>Errore nel caricamento del prodotto.</p>";
+      detailContainer.innerHTML = `
+        <div class="alert alert-danger">
+          <strong>Errore!</strong> Si è verificato un problema nel caricamento del prodotto. Riprova più tardi.
+        </div>
+      `;
       console.error(err);
     });
 } else {

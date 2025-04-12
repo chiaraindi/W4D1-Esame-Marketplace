@@ -1,7 +1,3 @@
-.home-nest {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-}
 
 .header-bg {
     background-image: url('https://assets.architecturaldigest.in/photos/62026064b5d9eefa7e4e2ddf/4:3/w_1439,h_1079,c_limit/How%20to%20furnish%20your%20home%20on%20a%20budget.jpg');
@@ -63,41 +59,4 @@
 
 footer {
     background-color: #3cb8b4;
-}
-
-h2 {
-    color: maroon;
-}
-
-/* Stile per card dei prodotti */
-.card {
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-    border-radius: 10px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.card-body h5 {
-    color: #3cb8b4;
-    /* Verde acqua */
-}
-
-.card-body p {
-    color: #7d7d7d;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .card {
-        margin-bottom: 20px;
-    }
 }
