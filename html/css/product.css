@@ -42,18 +42,18 @@
 }
 
 .custom-btn {
-    background-color: #3cb8b4; /* Colore di base */
-    color: white; /* Colore del testo */
+    background-color: #3cb8b4;
+    color: white;
     border-radius: 5px;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s ease; /* Transizione graduale */
+    transition: background-color 0.3s ease;
   }
   
   .custom-btn:hover {
-    background-color: #74c0a1; /* Colore al passaggio del mouse */
+    background-color: #74c0a1;
   }  
 
 

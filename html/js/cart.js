@@ -1,4 +1,4 @@
-// Visualizzare il carrello quando si clicca sull'icona del carrello
+// Visualizzare il carrello quando si clicca sull'icona
 document.getElementById('view-cart-btn').addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -11,7 +11,7 @@ document.getElementById('view-cart-btn').addEventListener('click', (e) => {
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = '<p>Il carrello è vuoto.</p>';
   } else {
-    // Aggiungi i prodotti al carrello visibile con un bottone per rimuovere ogni prodotto
+    // Aggiungi i prodotti al carrello
     cartItemsContainer.innerHTML = cart.map((item, index) => `
       <div class="cart-item">
         <strong>${item.name}</strong> - ${item.price} €
@@ -20,7 +20,7 @@ document.getElementById('view-cart-btn').addEventListener('click', (e) => {
     `).join('');
   }
 
-  cartOverlay.style.display = 'block'; // Mostra l'overlay
+  cartOverlay.style.display = 'block'; // overlay
 });
 
 // Funzione per rimuovere il prodotto dal carrello
@@ -31,7 +31,6 @@ document.getElementById('cart-items').addEventListener('click', (e) => {
   }
 });
 
-// Rimuovere il prodotto dal carrello
 function removeFromCart(index) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.splice(index, 1); // Rimuovi l'elemento all'indice specificato
