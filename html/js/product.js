@@ -29,11 +29,15 @@ if (id) {
     .catch(err => {
       detailContainer.innerHTML = `
         <div class="alert alert-danger">
-          <strong>Errore!</strong> Si è verificato un problema nel caricamento del prodotto. Riprova più tardi.
+          <strong>Errore!</strong> Si è verificato un problema nel caricamento del prodotto. L'url inserito potrebbe non essere corretto.
         </div>
       `;
       console.error(err);
     });
 } else {
-  detailContainer.innerHTML = "<p>ID non trovato nell'URL.</p>";
+  detailContainer.innerHTML = `
+        <div class="alert alert-danger">
+          <strong>Errore!</strong> Si è verificato un problema. L'ID non è presente nell'URL.
+        </div>
+      `;
 }
