@@ -1,0 +1,55 @@
+.home-nest {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  header {
+    background-color: #3cb8b4;
+  }
+  
+  footer {
+    background-color: #3cb8b4;
+  }
+  
+  h1, h2 {
+    color: white;
+  }
+  
+  /* Stile per i card dei prodotti */
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .card-body h5 {
+    color: #3cb8b4; /* Verde acqua */
+  }
+  
+  .card-body p {
+    color: #7d7d7d;
+  }
+  
+  /* Aggiungi uno sfondo beige per la pagina */
+  body {
+    background-color: #f7f7f7;
+  }
+  
+  /* Responsività per dispositivi più piccoli */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
