@@ -11,6 +11,17 @@ const imageUrlInput = document.getElementById('imageUrl');
 const priceInput = document.getElementById('price');
 const idInput = document.getElementById('product-id');
 
+// Conferma caricamento prodotto
+const showAlert = (message, type = 'success') => {
+  const container = document.getElementById('alert-container');
+  container.innerHTML = `
+    <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+      ${message}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi"></button>
+    </div>
+  `;
+};
+
 // Carica prodotti
 const loadProducts = () => {
   fetch(endpoint, {
@@ -57,11 +68,20 @@ form.addEventListener('submit', e => {
     },
     body: JSON.stringify(product)
   })
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error("Errore durante il salvataggio");
+      return res.json();
+    })
     .then(() => {
       form.reset();
       idInput.value = '';
       loadProducts();
+
+      showAlert(id ? 'Prodotto modificato con successo!' : 'Prodotto aggiunto con successo!');
+    })
+    .catch(err => {
+      console.error(err);
+      showAlert('Errore nel salvataggio del prodotto.', 'danger');
     });
 });
 
@@ -87,7 +107,15 @@ window.deleteProduct = (id) => {
     fetch(`${endpoint}${id}`, {
       method: 'DELETE',
       headers: { Authorization: token }
-    }).then(() => loadProducts());
+    })
+      .then(() => {
+        loadProducts();
+        showAlert('Prodotto eliminato con successo!', 'warning');
+      })
+      .catch(err => {
+        console.error(err);
+        showAlert('Errore durante l\'eliminazione del prodotto.', 'danger');
+      });
   }
 };
 
