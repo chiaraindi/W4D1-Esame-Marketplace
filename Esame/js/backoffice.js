@@ -34,7 +34,7 @@ const loadProducts = () => {
     });
 };
 
-// Salva prodotto (POST o PUT)
+// Salva prodotto
 form.addEventListener('submit', e => {
   e.preventDefault();
   const product = {
