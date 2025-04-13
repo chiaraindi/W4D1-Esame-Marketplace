@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Nest</title>
+  <title>Struttura pagina</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="./css/cart.css">
-  <link href="./css/index.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/product.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="/Esame/css/page-structure.css" rel="stylesheet">
 </head>
+<body>
 
-<body class="home-nest">
-
+  <!-- Header -->
   <header class="text-center py-5 header-bg">
     <div class="title-container">
-      <img src="/Esame/img/logo-nest.png">
+      <img src="/Esame/img/logo-nest.png" alt="Logo Nest">
       <h1>Home Nest</h1>
       <p>Rendi la tua casa il tuo nido di relax</p>
     </div>
   </header>
 
-  <!-- Navbar -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -32,10 +29,10 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white" href="./index.html">Home</a>
+          <a class="nav-link text-white" href="/Esame/index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="./index.html">Prodotti</a>
+          <a class="nav-link text-white" href="/Esame/index.html">Prodotti</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Chi Siamo</a>
@@ -44,7 +41,7 @@
           <a class="nav-link text-white" href="#footer">Contatti</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="./backoffice.html"> <i class="bi bi-lock"></i> Accedi al backoffice</a>
+          <a class="nav-link text-white" href="/Esame/html/backoffice.html"> <i class="bi bi-lock"></i> Accedi al backoffice</a>
         </li>
       </ul>
     </div>
@@ -57,26 +54,8 @@
   </div>
 </nav>
 
-
-  <!-- Product Section -->
-  <div class="container py-5">
-    <h2 class="text-center mb-5">I Nostri Prodotti</h2>
-    <div id="product-list" class="row row-cols-1 row-cols-md-3 g-4">
-      <!-- prodotti da file JS -->
-    </div>
-  </div>
-
-    <!-- Cart Overlay -->
-    <div id="cart-overlay" class="overlay">
-      <div id="cart-content" class="cart-content">
-        <h4>Carrello</h4>
-        <div id="cart-items"></div>
-        <button id="close-cart" class="close-btn">Chiudi</button>
-      </div>
-    </div>
-
-  <!-- Footer -->
-  <footer class="footer text-white mt-5 py-4">
+<!-- Footer -->
+<footer class="footer text-white mt-5 py-4">
     <div class="footer-container">
       <div class="social-icons mb-3">
         <i class="bi bi-facebook"></i>
@@ -119,9 +98,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/index.js"></script>
-  <script src="./js/cart.js"></script>
-  <script src="./js/product.js"></script>
+  <script src="../js/product.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/index.js"></script> 
 </body>
-
-</html>
